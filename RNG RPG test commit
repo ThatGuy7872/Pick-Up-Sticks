@@ -1,0 +1,26 @@
+
+#defining stats
+import random
+p1Name = input("What is the first challengers name?")
+p1Attack = int(input(p1Name + ", what is your attack stat?"))
+p1Defense = int(input("and what is your defense stat?"))
+p2Name = input("What is the second challengers name?")
+p2Attack = int(input(p2Name + ", what is your attack stat?"))
+p2Defense = int(input("and what is your defense stat?"))
+
+#RNG
+p1Roll = random.randint(1,12)
+print(p1Name + " rolled a " + str(p1Roll))
+p2Roll = random.randint(1,12)
+print(p2Name + " rolled a " + str(p2Roll))
+#Calculations
+p1Total = p1Attack + p1Defense + int(p1Roll)
+p2Total = p2Attack + p2Defense + int(p2Roll)
+
+#Def Winner
+if p1Total > p2Total:
+    print(p2Name + " wins!")
+elif p1Total == p2Total:
+    print("A close battle resolved in a draw!")
+else:
+    print(p2Name + " wins!")
