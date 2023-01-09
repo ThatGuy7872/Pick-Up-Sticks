@@ -16,21 +16,18 @@ def move(nSticks):
     else:
         return random.randint(1,3)
 
-#Making function for player loss (1 player)
-def lose1p():
+#Making function for player loss 
+def lose():
     print ("The number of sticks is 0.")
     print ("You lose.")
-#Making function for loss (2 player)
-def lose2p(loser):
-    print("The number of sticks is 0.")
-    print(loser, "loses.")
-    
+
 #Taking input of player's name
 sBlah = input("What is your name?")
 sName = sBlah.title()
 
 #Randomly choosing who goes first
 def random():
+    global randint
     nNumber = random.randint(1,2)
     if nNumber == 1:
         bPlayerfirst = True
@@ -68,20 +65,7 @@ def oneplayerhard():
             else:
                 print("There are no sticks.")
                 print("The computer loses.")
-                break    
-    
+                break
 
-gamemode = input("Which gamemode do you want to play? 2p, 1peasy, 1phard: ")
-if gamemode == "2p":
-    twoplayer()
-elif gamemode =="1peasy":
-    print("not coded yet")
-else:
-    oneplayerhard()
-
-
-
-
-
-
+oneplayerhard()
 
